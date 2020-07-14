@@ -1,0 +1,921 @@
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>HTML Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style>
+        body {
+            width: 100% !important;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            margin: 0;
+            padding: 0;
+            line-height: 100%;
+        }
+
+        p {
+            padding: 0;
+            margin: 0;
+        }
+
+        [style*="Verdana"] {
+            font-family: 'Verdana', arial, sans-serif !important;
+        }
+
+        img {
+            outline: none;
+            text-decoration: none;
+            border: none;
+            -ms-interpolation-mode: bicubic;
+            max-width: 100% !important;
+            margin: 0;
+            padding: 0;
+            display: block;
+        }
+
+        table td {
+            border-collapse: collapse;
+        }
+
+        table {
+            border-collapse: collapse;
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        /*****Header*****/
+
+        .main_top_td {
+            padding-top: 50px;
+        }
+
+        .main_bottom_td {
+            padding-bottom: 60px;
+        }
+
+        .header img {
+            width: 50px;
+            height: 50px;
+            margin-right: 20px;
+        }
+
+        .header-title {
+            font-size: 16px;
+            line-height: 22px;
+            color: #2F2D5A;
+        }
+
+        .menu a {
+            font-size: 16px;
+            color: #FB8D86;
+            text-decoration: none;
+            position: relative;
+            line-height: 22px;
+        }
+
+        .menu_top_link a {
+            padding-right: 5px;
+            border-right: 2px solid #2F2D5A;
+        }
+
+        .menu_bottom_link .td-border a {
+            padding-right: 5px;
+            border-right: 2px solid #2F2D5A;
+        }
+
+        .banner-main {
+            position: relative;
+            background-color: #FFF6F2;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .banner-main_title {
+            position: absolute;
+            top: 75px;
+            left: 60px;
+            z-index: 2;
+            font-size: 45px;
+            line-height: 63px;
+            color: #2F2D5A;
+        }
+
+        .banner-main_description {
+            position: absolute;
+            z-index: 2;
+            top: 145px;
+            left: 75px;
+            font-size: 20px;
+            line-height: 28px;
+            color: #2F2D5A;
+        }
+
+        .banner-main_link {
+            display: inline-block;
+            position: absolute;
+            z-index: 2;
+            max-width: 260px;
+            top: 325px;
+            left: 220px;
+            background: #FD454C;
+            box-shadow: 0px 0px 30px rgba(253, 69, 76, 0.55);
+            border-radius: 30px;
+        }
+
+        .banner-main_link a {
+            padding: 15px;
+            display: inline-block;
+            font-weight: 500;
+            font-size: 18px;
+            color: #FFF6F2;
+            text-decoration: none;
+        }
+
+        /*****Author*****/
+
+        .author {
+            background-color: #FFF6F2;
+        }
+
+        .author img {
+            width: 100px;
+            height: 100px;
+            margin-top: 60px;
+        }
+
+        .author_name {
+            font-size: 25px;
+            line-height: 35px;
+            color: #2F2D5A;
+            margin-top: 19px;
+        }
+
+        .author_title {
+            font-size: 16px;
+            line-height: 22px;
+            color: #737F89;
+            margin-top: 5px;
+        }
+
+        .author_description {
+            font-size: 18px;
+            line-height: 25px;
+            color: #2F2D5A;
+            margin-top: 10px;
+        }
+
+        .author_border {
+            background-color: #FFF6F2;
+            border-bottom: 1px solid #FB8D86;
+            margin-top: 60px;
+            margin-bottom: 70px;
+        }
+
+        /*****Footer*****/
+
+        .footer {
+            background-color: #FFF6F2;
+        }
+
+        .footer a {
+            font-size: 16px;
+            line-height: 22px;
+            color: #FB8D86;
+            text-decoration: none;
+        }
+
+        .footer_link_border a:first-child {
+            padding-right: 7px;
+            border-right: 2px solid #2F2D5A;
+        }
+
+        .footer_link_border a:last-child {
+            padding-left: 5px;
+        }
+
+        .footer_text {
+            font-size: 16px;
+            line-height: 22px;
+            color: #2F2D5A;
+            margin-top: 30px;
+        }
+
+        .footer_text a {
+            font-size: 16px;
+            line-height: 22px;
+            color: #2F2D5A;
+        }
+
+        .footer_description {
+            font-size: 16px;
+            line-height: 22px;
+            color: #737F89;
+            margin-top: 15px;
+            margin-bottom: 45px;
+        }
+
+        .footer_description a {
+            color: #FB8D86;
+        }
+
+        .footer img {
+            width: 60px;
+            height: 60px;
+            margin-top: 10px;
+            margin-bottom: 60px;
+        }
+
+        /*****Media*****/
+
+        @media (max-width: 705px) {
+            .table-700 {
+                width: 650px !important;
+            }
+
+            .table-600 {
+                width: 550px !important;
+            }
+
+            .banner-main {
+                height: 410px !important;
+            }
+
+            .banner-main_title {
+                top: 65px !important;
+                left: 65px !important;
+                font-size: 40px !important;
+            }
+
+            .banner-main_description {
+                top: 140px !important;
+                left: 0px !important;
+            }
+
+            .banner-main_link {
+                top: 310px !important;
+                left: 195px !important;
+            }
+        }
+
+        @media (max-width: 680px) {
+            .table-700 {
+                width: 590px !important;
+            }
+
+            .table-600 {
+                width: 550px !important;
+            }
+
+            .banner-main {
+                height: 370px !important;
+            }
+
+            .main_top_td {
+                padding-top: 30px !important;
+            }
+
+            .main_bottom_td {
+                padding-bottom: 10px !important;
+            }
+
+            .author img {
+                margin-top: 50px !important;
+            }
+
+            .banner-main_title {
+                top: 55px !important;
+                left: 45px !important;
+                font-size: 40px !important;
+            }
+
+            .banner-main_description {
+                top: 140px !important;
+                left: 0px !important;
+            }
+
+            .banner-main_link {
+                top: 290px !important;
+                left: 170px !important;
+            }
+        }
+
+        @media (max-width: 620px) {
+            .table-700 {
+                width: 540px !important;
+            }
+
+            .table-600 {
+                width: 500px !important;
+            }
+
+            .banner-main {
+                height: 330px !important;
+            }
+
+            .header-title {
+                margin-left: 10px;
+            }
+
+            .banner-main_title {
+                top: 36px !important;
+                left: 70px !important;
+                font-size: 29px !important;
+            }
+
+            .banner-main_description {
+                top: 105px !important;
+                left: 0px !important;
+                font-size: 17px !important;
+
+            }
+
+            .banner-main_link {
+                top: 245px !important;
+                left: 145px !important;
+            }
+        }
+
+        @media (max-width: 570px) {
+            .table-700 {
+                width: 510px !important;
+            }
+
+            .table-600 {
+                width: 450px !important;
+            }
+
+            .header-title {
+                margin-left: 10px;
+            }
+
+            .main_top_td {
+                padding-top: 25px !important;
+            }
+
+            .main_bottom_td {
+                padding-bottom: 15px !important;
+            }
+
+            .author img {
+                margin-top: 30px !important;
+            }
+
+            .footer_text {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+
+            .author_description {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+
+            .footer_text p br {
+                display: none !important;
+            }
+
+            .author_description p br {
+                display: none !important;
+            }
+
+            .banner-main {
+                height: 350px;
+                width: 560px;
+            }
+
+            .footer_description {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+
+            .banner-main_title {
+                top: 36px !important;
+                left: 70px !important;
+                font-size: 28px !important;
+            }
+
+            .banner-main_description {
+                top: 105px !important;
+                left: 0px !important;
+                font-size: 17px !important;
+
+            }
+
+            .banner-main_link {
+                top: 245px !important;
+                left: 130px !important;
+            }
+        }
+
+        @media (max-width: 540px) {
+            .table-700 {
+                width: 500px !important;
+            }
+
+            .table-600 {
+                width: 440px !important;
+            }
+
+            .banner-main {
+                height: 310px !important;
+                width: 500px !important;
+            }
+
+            .author_border {
+                margin-top: 30px;
+                margin-bottom: 40px;
+            }
+
+            .banner-main_title {
+                top: 30px !important;
+                left: 70px !important;
+                font-size: 27px !important;
+            }
+
+            .banner-main_description {
+                top: 95px !important;
+                left: 0px !important;
+                font-size: 16px !important;
+
+            }
+
+            .banner-main_link {
+                top: 230px !important;
+                left: 135px !important;
+            }
+
+            .banner-main_link a {
+                font-size: 16px !important;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .table-700 {
+                width: 500px !important;
+            }
+
+            .table-600 {
+                width: 390px !important;
+            }
+
+            .banner-main {
+                height: 290px !important;
+                width: 500px !important;
+            }
+
+            .author img {
+                margin-top: 30px !important;
+            }
+
+            .author_border {
+                margin-top: 30px !important;
+                margin-bottom: 40px !important;
+            }
+
+            .header td {
+                display: block !important;
+            }
+
+            .menu_top_link {
+                text-align: center !important;
+                width: 100% !important;
+                margin-bottom: 10px !important;
+                margin-top: 10px !important;
+            }
+
+            .menu_top_link a {
+                font-size: 20px !important;
+            }
+
+            .main_bottom_td {
+                padding-bottom: 20px !important;
+            }
+
+            .menu_bottom_link {
+                text-align: center !important;
+                width: 100% !important;
+            }
+
+            .td-border {
+                margin-bottom: 10px !important;
+            }
+
+            .menu_bottom_link a {
+                padding-right: 5px;
+                border-right: 2px solid #2F2D5A;
+                margin-top: 5px;
+                font-size: 20px !important;
+            }
+
+            .menu td {
+                text-align: center !important;
+                width: 100% !important;
+            }
+
+            .header img {
+                margin: 0 auto 10px auto !important;
+            }
+
+            .header-title {
+                text-align: center !important;
+                font-size: 20px !important;
+                margin-bottom: 10px;
+                margin-top: 5px !important;
+            }
+
+            .banner-main_title {
+                top: 10px !important;
+                left: 70px !important;
+                font-size: 27px !important;
+            }
+
+            .banner-main_description {
+                top: 75px !important;
+                left: 0px !important;
+                font-size: 16px !important;
+            }
+
+            .banner-main_link {
+                top: 210px !important;
+                left: 135px !important;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .table-700 {
+                width: 350px !important;
+                max-height: 225px !important;
+            }
+
+            .table-600 {
+                width: 300px !important;
+            }
+
+            .menu a {
+                font-size: 15px !important;
+            }
+
+            .banner-main {
+                width: 350px !important;
+                height: 225px !important;
+            }
+
+            .author_border {
+                margin-top: 25px !important;
+                margin-bottom: 35px !important;
+            }
+
+            .author img {
+                width: 70px !important;
+                height: 70px !important;
+                margin-top: 20px !important;
+            }
+
+            .author_name {
+                font-size: 22px !important;
+            }
+
+            .banner-main_title {
+                top: -5px !important;
+                left: 65px !important;
+                font-size: 18px !important;
+                max-width: 250px !important;
+            }
+
+            .banner-main_description {
+                top: 45px !important;
+                left: 0px !important;
+                line-height: 20px;
+                font-size: 12px !important;
+            }
+
+            .banner-main_description p br {
+                display: none !important;
+            }
+
+            .banner-main_link {
+                top: 150px !important;
+                left: 80px !important;
+            }
+
+            .banner-main_link a {
+                font-size: 13px !important;
+            }
+
+            .author_name {
+                font-size: 20px !important;
+            }
+
+            .author_title {
+                font-size: 16px !important;
+            }
+
+            .author_description {
+                font-size: 14px !important;
+            }
+
+            .footer_text {
+                font-size: 15px !important;
+            }
+
+            .footer_description {
+                font-size: 14px !important;
+                margin-bottom: 10px !important;
+            }
+        }
+
+        @media (max-width: 370px) {
+            .table-700 {
+                width: 340px !important;
+            }
+
+            .table-600 {
+                width: 290px !important;
+            }
+
+            .header-title {
+                font-size: 15px !important;
+            }
+
+            .menu a {
+                font-size: 15px !important;
+            }
+
+            .author img {
+                margin-top: 20px !important;
+            }
+
+            .author_border {
+                margin-top: 20px !important;
+                margin-bottom: 30px !important;
+            }
+
+            .author img {
+                width: 70px !important;
+                height: 70px !important;
+            }
+
+            .banner-main_title {
+                top: -5px !important;
+                left: 60px !important;
+                font-size: 18px !important;
+                max-width: 250px !important;
+            }
+
+            .banner-main_description {
+                top: 40px !important;
+                left: 22px !important;
+                line-height: 17px !important;
+                font-size: 12px !important;
+                max-width: 300px !important;
+            }
+
+            .banner-main_link {
+                top: 145px !important;
+                left: 75px !important;
+            }
+
+            .author_name {
+                font-size: 17px !important;
+            }
+
+            .author_title {
+                font-size: 14px !important;
+            }
+
+            .author_description {
+                font-size: 12px !important;
+            }
+        }
+
+        @media (max-width: 350px) {
+            .table-700 {
+                width: 310px !important;
+            }
+
+            .table-600 {
+                width: 260px !important;
+            }
+
+            .author img {
+                margin-top: 20px !important;
+            }
+
+            .author_border {
+                margin-top: 20px !important;
+                margin-bottom: 30px !important;
+            }
+
+            .banner-main_title {
+                top: -5px !important;
+                left: 40px !important;
+            }
+
+            .banner-main_description {
+                top: 40px !important;
+                left: 26px !important;
+                font-size: 12px !important;
+                max-width: 250px !important;
+            }
+
+            .banner-main_link {
+                top: 150px !important;
+                left: 60px !important;
+            }
+
+            .footer_text {
+                font-size: 14px !important;
+            }
+
+            .footer_description {
+                font-size: 13px !important;
+            }
+        }
+
+    </style>
+</head>
+
+<body style="margin: 0; padding: 0;">
+
+<table class="table-700" cellpadding="0" cellspacing="0" width="700" bgcolor="#FFF6F2" align="center">
+    <tr>
+        <td>
+            <table class="main table-700" cellpadding="0" cellspacing="0" width="700" align="center">
+                <tr bgcolor="#FFF6F2">
+                    <td>
+                        <table class="main table-700" cellpadding="0" cellspacing="0" width="700" align="left">
+                            <tr>
+                                <td class="main_top_td"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table class="header table-600" cellpadding="0" cellspacing="0" width="600"
+                                           align="center">
+                                        <tr>
+                                            <td align="left" class="logo">
+                                                <a href="https://www.google.ru/">
+                                                    <img src="https://i.ibb.co/KDttSp8/instaCat.png" alt="logo company">
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <p class="header-title"
+                                                   style="font-family: Arial, Helvetica, sans-serif, 'Verdana';">
+                                                    Замурчательный <br/>
+                                                    &laquo;Инстаграм&raquo;
+                                                </p>
+                                            </td>
+
+                                            <td align="right" class="menu">
+                                                <table class="menu_top_link" cellpadding="0" cellspacing="0"
+                                                       align="right" width="210">
+                                                    <tr>
+                                                        <td align="right">
+                                                            <a href="https://www.google.ru/"
+                                                               style="font-family: Arial, Helvetica, sans-serif, 'Verdana';">Перейти
+                                                                на сайт
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <table class="menu_bottom_link" cellpadding="0" cellspacing="0"
+                                                       align="right" width="185">
+                                                    <tr>
+                                                        <td class="td-border" align="right">
+                                                            <a href="https://www.google.ru/"
+                                                               style="font-family: Arial, Helvetica, sans-serif, 'Verdana';">Мои
+                                                                услуги
+                                                            </a>
+                                                        </td>
+                                                        <td align="right">
+                                                            <a href="https://www.google.ru/"
+                                                               style="font-family: Arial, Helvetica, sans-serif, 'Verdana';">Пособие
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            <tr>
+                                <td class="main_bottom_td"></td>
+                            </tr>
+                            </tr>
+                            <table class="banner-main table-700" cellpadding="0" cellspacing="0" height="450"
+                                   width="700" align="center"
+                                   style="background-image: url(https://i.ibb.co/Lt8X92J/background-Banner.png)">
+                                <tr>
+                                    <td class="banner-main_title" align="center">
+                                        <p style="font-family: Arial, Helvetica, sans-serif, 'Verdana';">Заверши
+                                            регистрацию :)</p>
+                                    </td>
+                                <tr>
+                                    <td class="banner-main_description table-700" align="center">
+                                        <p style="font-family: Arial, Helvetica, sans-serif, 'Verdana';">Ты попала в
+                                            сообщество любителей «Инстаграма», <br/>
+                                            крошка! Я научу тебя вести свой блог или <br/>
+                                            раскручивать аккаунты компаний. Но, чтобы <br/>
+                                            начать, тебе осталось подтвердить свою почту.
+                                        </p>
+                                    </td>
+                                <tr align="center">
+                                    <td class="banner-main_link" align="center">
+                                        <a style="font-family: Arial, Helvetica, sans-serif, 'Verdana';"
+                                           href="https://www.google.ru/">
+                                            Подтвердить подписку
+                                        </a>
+                                    </td>
+                                </tr>
+                                </tr>
+                                </tr>
+                            </table>
+
+                            <table class="author table-700" cellpadding="0" cellspacing="0" width="700" align="center">
+                                <tr>
+                                    <td align="center">
+                                        <a href="https://www.google.ru/">
+                                            <img src="https://i.ibb.co/R4YvbRy/author.png" alt="author">
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">
+                                        <p class="author_name"
+                                           style="font-family: Arial, Helvetica, sans-serif, 'Verdana';">
+                                            Ксюша Каширская
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">
+                                        <p class="author_title"
+                                           style="font-family: Arial, Helvetica, sans-serif, 'Verdana';">
+                                            Блогер, копирайтер и просто хороший человек
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">
+                                        <p class="author_description"
+                                           style="font-family: Arial, Helvetica, sans-serif, 'Verdana';">
+                                            «Я люблю котиков, морковку с кожурой <br/>
+                                            и своих подписчиков».
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <tr bgcolor="#FFF6F2" class="table-700">
+                                <td>
+                                    <table class="author_border table-300" cellpadding="0" cellspacing="0" width="300"
+                                           align="center">
+                                        <tr>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+
+                            <table class="footer table-700" cellpadding="0" cellspacing="0" width="700" align="center">
+                                <tr>
+                                    <td class="footer_link_border" align="center">
+                                        <a href="https://www.google.ru/">Инстаграм</a>
+                                        <a href="https://www.google.ru/">Телеграм</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">
+                                        <p class="footer_text"
+                                           style="font-family: Arial, Helvetica, sans-serif, 'Verdana';">
+                                            Ты получила это письмо, так как подписалась на мою рассылку <br/>
+                                            на сайте <a href="https://www.google.ru/">llogan.ru.</a> Любви, котиков и
+                                            красивых картинок тебе :*
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">
+                                        <p class="footer_description">
+                                            Если я тебе надоела, ты можешь отписаться: <a href="https://www.google.ru/">отписька</a>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">
+                                        <img src="https://i.ibb.co/KDttSp8/instaCat.png" alt="instaCat">
+                                    </td>
+                                </tr>
+                            </table>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+
+        </td>
+    </tr>
+</table>
+</body>
+
+</html>
